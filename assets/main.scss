@@ -1,0 +1,38 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+}
+.about-heading {
+    text-align: center;
+}
+.about-img {
+    max-width: 25%;
+    height: auto;
+    margin: 1rem auto 1rem auto;
+    border: .1rem solid black;
+    border-radius: 50%;
+}
+.about-text {
+    text-align: center;
+}
+.about-social-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 1rem 0;
+}
+.about-social-link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 1rem 0 1rem 0;
+}
+.about-social-link-item {
+    margin: 0 0.5rem 0 0.5rem;
+}
