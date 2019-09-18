@@ -51,6 +51,23 @@
 .footer-nav a {
     text-decoration: none;
 }
+.header-nav {
+    background-color: #eeeeee;
+    border-bottom: 0.01rem solid #e0e0e0;
+    text-align: center;
+    padding: 0.5rem 0 0.5rem 0;
+    font-size: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.header-nav a {
+    text-decoration: none;
+}
+.nav-link-active {
+    color: black;
+}
 .nav-link-pages {
     display: grid;
     grid-template-columns: 1fr;

@@ -1,0 +1,14 @@
+<header>
+    <nav class="header-nav">
+        <div class="nav-link-home">
+            <a href="/" {% if page.url == "/" %}class="nav-link-active"{% endif %}>
+                dj knox
+            </a>
+        </div>
+        <div class="nav-link-pages">
+            <a href="/about" {% if page.url == "/about/" %}class="nav-link-active"{% endif %}>
+                about
+            </a>
+        </div>
+    </nav>
+</header>
