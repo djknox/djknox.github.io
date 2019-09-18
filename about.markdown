@@ -1,11 +1,11 @@
 ---
 layout: page
-title: About Me
+title: About
 permalink: /about/
 ---
 
 <div class="about-container">
-    <h1 class="about-heading">About Me</h1>
+    <!-- <h1 class="about-heading">About Me</h1> -->
     <img class="about-img" src="/assets/img/djknox.JPG"/>
     <div class="about-text">
         I'm dj, a full-stack web developer based in Durham, North Carolina.
