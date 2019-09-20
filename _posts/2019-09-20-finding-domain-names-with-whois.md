@@ -19,13 +19,13 @@ whois google.com
 will return (amongst a lot of other information):
 
 ```
-   Domain Name: GOOGLE.COM
-   .
-   .
-   .
-   Updated Date: 2019-09-09T15:39:04Z
-   Creation Date: 1997-09-15T04:00:00Z
-   Registry Expiry Date: 2028-09-14T04:00:00Z
+Domain Name: GOOGLE.COM
+.
+.
+.
+Updated Date: 2019-09-09T15:39:04Z
+Creation Date: 1997-09-15T04:00:00Z
+Registry Expiry Date: 2028-09-14T04:00:00Z
 ```  
 
 With this output, we can see that Google registered its domain name on September 15, 1997.

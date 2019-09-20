@@ -3,6 +3,9 @@
 
 @import "{{ site.theme }}";
 
+h3 {
+    margin-bottom: 0.20rem;
+}
 body {
     font-family: 'PT Sans Caption', sans-serif;
 }
@@ -80,6 +83,9 @@ body {
     grid-template-rows: 1fr;
     grid-column-gap: 0.5rem;
     margin: 0 0.5rem 0 0.5rem;
+}
+.rss-subscribe {
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
