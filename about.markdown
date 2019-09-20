@@ -6,7 +6,7 @@ permalink: /about/
 
 <div class="about-container">
     <!-- <h1 class="about-heading">About Me</h1> -->
-    <img class="about-img" src="/assets/img/djknox.JPG"/>
+    <img class="about-img" src="{{ "/assets/img/djknox.JPG" | relative_url }}">
     <div class="about-text">
         I'm dj, a full-stack web developer based in Durham, North Carolina.
     </div>

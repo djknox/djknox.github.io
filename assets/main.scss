@@ -3,6 +3,9 @@
 
 @import "{{ site.theme }}";
 
+body {
+    font-family: 'PT Sans Caption', sans-serif;
+}
 .about-container {
     display: flex;
     flex-direction: column;
@@ -13,7 +16,7 @@
 .about-img {
     max-width: 25%;
     height: auto;
-    margin: 1rem auto 2rem auto;
+    margin: 0 auto 2rem auto;
     border: .1rem solid black;
     border-radius: 50%;
 }
@@ -24,14 +27,14 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 0 0;
 }
 .about-social-link-container {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin: 2rem 0 2rem 0;
+    margin: 2rem 0 0 0;
 }
 .about-social-link-item {
     margin: 0 0.5rem 0 0.5rem;
@@ -64,6 +67,9 @@
 }
 .header-nav a {
     text-decoration: none;
+}
+.post-title {
+    text-align: center;
 }
 .nav-link-active {
     color: black;
