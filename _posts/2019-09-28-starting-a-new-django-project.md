@@ -55,7 +55,7 @@ django-admin startproject my_new_django_project .
 
 Your project directory will now have the following structure:
 ```
-Pipfile			Pipfile.lock		manage.py		my_new_django_project
+Pipfile		Pipfile.lock	manage.py	my_new_django_project
 ```
 
 > ```manage.py``` is Django's command-line utility that sits at the root of your project. You'll use it to do all sorts of tasks like making/running migrations and starting your development server.  
@@ -75,4 +75,4 @@ Use the ```runserver``` command to start the development server and see your new
 python3 manage.py runserver
 ```
 
-Now you have a fresh Django project to start building your web app on! 
+Now you have a fresh Django project to start building your web app with! 
