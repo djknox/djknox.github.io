@@ -2,6 +2,7 @@
 layout: post
 title: Starting A New Django Project
 permalink: "/starting-a-new-django-project/"
+date: 2019-09-28 18:27 -0400
 ---
 [Django](https://www.djangoproject.com/) is a hugely popular framework for creating web applications. Written in Python, the framework is a common choice for new startups, but it is also used by many large-scale applications like Instagram and Eventbrite.  
 
