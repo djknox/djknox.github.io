@@ -2,6 +2,7 @@
 layout: post
 title: Deploying a Django App to Heroku
 permalink: "/deploying-a-django-app-to-heroku/"
+date: 2019-10-06 14:14 -0400
 ---
 [Heroku](https://www.heroku.com/platform) is a cloud-based platform as a service (PaaS) that lets developers easily deploy their apps to the web. The service includes a free tier, so it can be great for sharing hobby projects or messing around with cloud deployment. If you've already [started your own Django app](/starting-a-new-django-project/) and are ready to make it live, then this article will show you how to get it on Heroku.
 
@@ -41,7 +42,7 @@ web: gunicorn <project_directory>.wsgi
 
 For example, if your project has this structure:  
 ```
-Pipfile		Pipfile.lock    Procfile	manage.py	my_django_project
+Pipfile     Pipfile.lock    Procfile    manage.py   my_django_project
 ```
 then your ```Procfile``` will contain:
 ```
@@ -110,4 +111,4 @@ You can set environment variables with the ```config:set``` command. For example
 heroku config:set DEBUG=False
 ```
 
-After going through these deployment steps successfully, you should be able to see your Django app on the web by adding ```.herokuapp.com``` to the end of the name you gave to your Heroku app.
+After going through these deployment steps successfully, you'll be able to see your Django project on the web by adding ```.herokuapp.com``` to the end of your Heroku app's name!
