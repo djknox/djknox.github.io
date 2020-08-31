@@ -18,6 +18,7 @@ Multitenancy is, basically, when a single app serves several (groups of) users a
 Freek shared a new `composer` package for implementing multitenancy within a Laravel application called [Laravel Multitenancy](spatie.be/docs/laravel-multitenancy).  
 
 ---
+
 Tighten - [@tightenco](https://twitter.com/TightenCo)  
 "onramp Ad"
 
@@ -29,71 +30,21 @@ Although this was an advertisement, [onramp](onramp.dev) seems like something wo
 Jenny Shen - [@jennyshen](https://twitter.com/jennyshen)  
 "Build Bridges, Not Walls - Design for Users Across Cultures"  
 
-What is culture?
-What does it mean for designers and developers?
-	* No longer enough to simply translate to various languages
-	* Users also want a product that acknowledges their unique cultural characteristics and business practices
+Jenny explained what culture means for designers/developers and why it's no longer acceptable to simply translate an application's text into various languages. Modern UX design must consider the unique cultural characteristics of the intended users.
 
-Example:
-Chinese UX design tends to be very busy:
-	- typing chinese is more difficult, so optimize for browsing rather than search
-	- chinese citizens have different ideas on personal space: they are used to crowded spaces and many choices
-
-Pro tip:
-do research in the local language instead of English, etc.
-
-Use local payment options
-Consider devices/connectivity
-Don't use Google Translate for copy
-
+Tips:
+- research culture using the language of the intended audience  
+- implement local payment options  
+- consider device performance and connectivity speeds  
+- don't use Google Translate for text/copy  
 
 ---  
 
 11:00AM
-Jonathan Reinink - @reinink
-Building Modern Monoliths With Inertia.js
+Jonathan Reinink - [@reinink](https://twitter.com/reinink) 
+"Building Modern Monoliths With Inertia.js"
 
-Build modern SPAs with React/Vue/Svelte
-No APIs
-
-In view:
-@inertia blade directive helper
-	* outputs a base <div id="app"> - Vue/React/Svelte gets booted into this div
-
-In controller:
-return inertia('', []);
-
-In Vue component:
-data is passed via prop(s)
-
-
-SPA Mode:
-Replace anchor tags with <inertia-link>
-	* Inertia intercepts the link click and loads everything without a new page load
-
-Loading bar will automatically be displayed at top of page if loading is slow
-
-"Scroll regions"
-	- add 'scroll-region' attribute to a div/component/etc/
-	- saves horizontal and vertical positioning of page
-	- Inertia will maintain scroll position as you go back in history
-
-"Persistent Layouts"
-	- add 'layout' prop on Vue component
-	- Inertia will maintain state/functionality of a component across pages
-	- example: music player at bottom of screen will keep playing song between pages
-
-Form submissions
-	- this.$inertia.post()
-	- sends request to controller
-
-
----  
-
-
-Ad - Sentry
-sentry.io
-Error tracking
+Jonathan shared how [Inertia.js](https://inertiajs.com/) can be used to convert a typical server-side rendered application into a client-side rendered Single Page Application (SPA). Inertia is not a framework itself, but rather a tool that sits between the front-end (React, Vue, Svelte) and back-end (Laravel, Rails) frameworks to swap out full page reloads with JSON responses.
 
 ---  
 
