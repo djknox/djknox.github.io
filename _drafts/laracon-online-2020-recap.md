@@ -258,33 +258,33 @@ takeout disable postgresql
 ---  
 
 3:30PM EST  
-Marcel Pociot
-Refactoring to Simplicity
+Marcel Pociot  - [@marcelpociot](https://twitter.com/marcelpociot)
+"Refactoring to Simplicity"  
 
-Simple code is:
-	- expressive
-	- readable
-	- understandable
-	- self-explanatory
-	- reasurring
-	- fun
+Marcel's presentation was centered around a core tenant of Laravel: simplicity.  
 
-Familiar code != Simple code
+He stated that simple code is:
+- expressive
+- readable
+- understandable
+- self-explanatory
+- reasurring
+- fun
 
-Do code reviews to ensure that code is actually simple for your team to understand and maintain
+Simple code is _not_:
+- Familiar code: code is not simple just because you wrote it recently and it feels elegant or makes sense to you right now  
 
-Refactor code as it grows
+Tips on achieving simplicity:
+- do code reviews to ensure that code is actually simple for your team to understand and maintain
+- refactor code as it grows
+- have courage:
+   * know what you can skip to make things easy and simple
+   * be brave enough to present your code
+   * leave behind code that reflects you and your abilities
 
-Simple rules for simple code:
-	- naming variables
-	- useful method names
-	- return early
-
-Simplicity takes courage
-	- know what you can skip to make things easy and simple
-	- be brave enough to present your code
-	- leave behind code that reflects you and your abilities
-
+A couple simple rules for simple code:
+- give variables and methods useful names
+- `return` early from methods so logic is easily understood
 
 ---  
 
