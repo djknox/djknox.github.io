@@ -4,31 +4,31 @@ title: Laracon Online 2020 Recap
 permalink: "/laracon-2020/"
 date: 2020-09-04 16:33 -0400
 ---
-Laracon is the Laravel community's time to get together, listen to talks from a variety of speakers, and get excited about the new features promised in future releases of the framework. Originally planned to be held [earlier this year at Atlanta's Georgia Aquarium](https://twitter.com/taylorotwell/status/1177566503060869121), the conference was cancelled due to COVID-19 and rescheduled for August 26th in a completely virtual setting. Fortunately, a virtual version of Laracon named "Laracon Online" has been held every year since 2017, so the event team was well-equipped with the experience needed to transition from aquarium to Zoom.  
+Laracon is the Laravel community's time to get together, listen to talks from a variety of speakers, and get excited about the new features promised in future releases of the framework. Originally planned to be held [earlier this year at Atlanta's Georgia Aquarium](https://twitter.com/taylorotwell/status/1177566503060869121){:target="_blank"}, the conference was cancelled due to COVID-19 and rescheduled for August 26th in a completely virtual setting. Fortunately, a virtual version of Laracon named "Laracon Online" has been held every year since 2017, so the event team was well-equipped with the experience needed to transition from aquarium to Zoom.  
 
 Below is a brief recap of Laracon Online 2020 that I hope will be useful for anyone who was unable to attend or could just use a refresher on all the cool stuff that happened.  
 
 ---
 
 10:00AM EST  
-Freek Van Der Herten - [@freekmurze](https://twitter.com/freekmurze)  
+Freek Van Der Herten - [@freekmurze](https://twitter.com/freekmurze){:target="_blank"}  
 "A Practical Look at Multitenancy in Laravel"
 
 Multitenancy is, basically, when a single app serves several (groups of) users and those users/teams are unable to see the data belonging to other users/teams.  
 
-Freek shared a new `composer` package for implementing multitenancy within a Laravel application called [Laravel Multitenancy](spatie.be/docs/laravel-multitenancy).  
+Freek shared a new `composer` package for implementing multitenancy within a Laravel application called [Laravel Multitenancy](spatie.be/docs/laravel-multitenancy){:target="_blank"}.  
 
 ---
 
-Tighten - [@tightenco](https://twitter.com/TightenCo)  
+Tighten - [@tightenco](https://twitter.com/TightenCo){:target="_blank"}  
 "onramp Ad"
 
-Although this was an advertisement, [onramp](https://onramp.dev) seems like something worth sharing here. While still a work in progress, the website serves as a free (for now?) resource for getting into software development with Laravel.  
+Although this was an advertisement, [onramp](https://onramp.dev){:target="_blank"} seems like something worth sharing here. While still a work in progress, the website serves as a free (for now?) resource for getting into software development with Laravel.  
 
 ---
 
 10:30AM EST  
-Jenny Shen - [@jennyshen](https://twitter.com/jennyshen)  
+Jenny Shen - [@jennyshen](https://twitter.com/jennyshen){:target="_blank"}  
 "Build Bridges, Not Walls - Design for Users Across Cultures"  
 
 Jenny explained what culture means for designers/developers and why it's no longer acceptable to simply translate an application's text into various languages. Modern UX design must consider the unique cultural characteristics of the intended users.
@@ -42,18 +42,18 @@ Tips:
 ---  
 
 11:00AM EST  
-Jonathan Reinink - [@reinink](https://twitter.com/reinink)  
+Jonathan Reinink - [@reinink](https://twitter.com/reinink){:target="_blank"}  
 "Building Modern Monoliths With Inertia.js"
 
-Jonathan shared how [Inertia.js](https://inertiajs.com/) can be used to convert a typical server-side rendered application into a client-side rendered Single Page Application (SPA). Inertia is not a framework itself, but rather a tool that sits between the front-end (React, Vue, Svelte) and back-end (Laravel, Rails) frameworks to swap out full page reloads with JSON responses.
+Jonathan shared how [Inertia.js](https://inertiajs.com/){:target="_blank"} can be used to convert a typical server-side rendered application into a client-side rendered Single Page Application (SPA). Inertia is not a framework itself, but rather a tool that sits between the front-end (React, Vue, Svelte) and back-end (Laravel, Rails) frameworks to swap out full page reloads with JSON responses.
 
 ---  
 
 11:30AM EST  
-Jeffrey Way - [@jeffrey_way](https://twitter.com/jeffrey_way)  
+Jeffrey Way - [@jeffrey_way](https://twitter.com/jeffrey_way){:target="_blank"}  
 "Bad Is Good"
 
-Jeffrey spoke about how using utility CSS and inline JS on reusable HTML components violates many design principles and would be considered "bad code" to a lot of developers, past and present. However, he makes the case for using frameworks such as [Tailwind](https://tailwindcss.com/) and [Alpine](https://github.com/alpinejs/alpine) to place utility CSS classes and inline JS on [Blade components](https://laravel.com/docs/7.x/blade#components) in order to simplify reusable units.
+Jeffrey spoke about how using utility CSS and inline JS on reusable HTML components violates many design principles and would be considered "bad code" to a lot of developers, past and present. However, he makes the case for using frameworks such as [Tailwind](https://tailwindcss.com/){:target="_blank"} and [Alpine](https://github.com/alpinejs/alpine){:target="_blank"} to place utility CSS classes and inline JS on [Blade components](https://laravel.com/docs/7.x/blade#components){:target="_blank"} in order to simplify reusable units.
 
 Here's a simple example of a counter component that uses Tailwind + Alpine, showing a utility CSS class and inline JavaScript:
 ```
@@ -67,12 +67,12 @@ Here's a simple example of a counter component that uses Tailwind + Alpine, show
 </div>
 ```
 
-Jeffrey finished with a brief talk on the practice of end-to-end testing and how it can be done with [Cypress](https://www.cypress.io/how-it-works/) and Laracast's [Laravel Cypress package](https://github.com/laracasts/cypress) or by using Laravel's native [Dusk](https://laravel.com/docs/7.x/dusk) composer package.  
+Jeffrey finished with a brief talk on the practice of end-to-end testing and how it can be done with [Cypress](https://www.cypress.io/how-it-works/){:target="_blank"} and Laracast's [Laravel Cypress package](https://github.com/laracasts/cypress){:target="_blank"} or by using Laravel's native [Dusk](https://laravel.com/docs/7.x/dusk){:target="_blank"} composer package.  
 
 ---  
 
 12:15PM EST  
-Taylor Otwell - [@taylorotwell](https://twitter.com/taylorotwell)
+Taylor Otwell - [@taylorotwell](https://twitter.com/taylorotwell){:target="_blank"}
 "Exploring Laravel 8.x"
 
 Laravel 8 will be released on September 8th, 2020 and Taylor shared a lot of the new features that will be available on that day. This is always an exciting part of Laracon, so I'll list some of the new features/improvements that were shared.
@@ -171,7 +171,7 @@ Model Factory improvements
             - Laravel will know that Post, User, etc model are parent models
 - `hasAttached()` method - many-to-many relationships
 
-- [Backwards Compatability Package](github.com/laravel/legacy-factories)
+- [Backwards Compatability Package](github.com/laravel/legacy-factories){:target="_blank"}
     - provides support for model factories in Laravel versions before Laravel 8
 
 Laravel JetStream  
@@ -191,7 +191,7 @@ Needless to say, there is a lot to look forward to in Laravel 8.
 ---  
 
 2:00PM EST  
-Prosper Otemuyiwa - [@unicodeveloper](https://twitter.com/unicodeveloper)  
+Prosper Otemuyiwa - [@unicodeveloper](https://twitter.com/unicodeveloper){:target="_blank"}  
 "Supercharing Laravel Apps with Machine Learning"  
 
 Prosper provided this basic definition of "Machine Learning": computer processing and evaluating data beyond programmed algorithms. He spoke about how developers can get started with machine learning by leveraging pre-trained models that are accessible via open APIs.
@@ -228,7 +228,7 @@ When the package is released, it can be installed with `composer require unicode
 ---  
 
 2:30PM EST  
-Colin Decarlo - [@colindecarlo](https://twitter.com/colindecarlo)  
+Colin Decarlo - [@colindecarlo](https://twitter.com/colindecarlo){:target="_blank"}  
 "The Importance of Practice"  
 
 Colin shared his thoughts on the importance of having a daily routine for practice. His advice was to budget time each day for refining skills, ideally after accomplishing any tasks that are necessary to doing your job. That way, practice becomes a normal routine and is positioned as an integral part of your daily life.  
@@ -236,13 +236,13 @@ Colin shared his thoughts on the importance of having a daily routine for practi
 ---  
 
 3:00PM EST  
-Matt Stauffer - [@stauffermatt](https://twitter.com/stauffermatt)  
-Jose Soto - [@josecanhelp](https://twitter.com/josecanhelp)  
+Matt Stauffer - [@stauffermatt](https://twitter.com/stauffermatt){:target="_blank"}  
+Jose Soto - [@josecanhelp](https://twitter.com/josecanhelp){:target="_blank"}  
 "Don't Cry When Your Dev Dependencies Die"  
 
-Matt and Jose both work at Tighten and shared their preferences for configuring a local development environment, which involves a combination of [Laravel Valet](https://laravel.com/docs/7.x/valet) and [Docker](https://www.docker.com/why-docker). Valet is not particularly suited for managing certain dependencies like MySQL, Redis, Postgres, etc., so Docker can be great for filling in those gaps.  
+Matt and Jose both work at Tighten and shared their preferences for configuring a local development environment, which involves a combination of [Laravel Valet](https://laravel.com/docs/7.x/valet){:target="_blank"} and [Docker](https://www.docker.com/why-docker){:target="_blank"}. Valet is not particularly suited for managing certain dependencies like MySQL, Redis, Postgres, etc., so Docker can be great for filling in those gaps.  
 
-To help with some of the complexity of installing and managing dependencies with Docker, Tighten developed [Takeout](https://github.com/tightenco/takeout) and made it available to the community. It is intended to be used with the Valet + Docker environment, so it could be a great tool to pull in to your projects if you use that configuration.  
+To help with some of the complexity of installing and managing dependencies with Docker, Tighten developed [Takeout](https://github.com/tightenco/takeout){:target="_blank"} and made it available to the community. It is intended to be used with the Valet + Docker environment, so it could be a great tool to pull in to your projects if you use that configuration.  
 Be sure to install Docker first, and then install Takeout with `composer global require tightenco/takeout`.  
 
 Some examples of `takeout` commands:
@@ -260,7 +260,7 @@ takeout disable postgresql
 ---  
 
 3:30PM EST  
-Marcel Pociot  - [@marcelpociot](https://twitter.com/marcelpociot)  
+Marcel Pociot  - [@marcelpociot](https://twitter.com/marcelpociot){:target="_blank"}  
 "Refactoring to Simplicity"  
 
 Marcel's presentation was centered around a core tenant of Laravel: simplicity.  
@@ -291,7 +291,7 @@ A couple simple rules for simple code:
 ---  
 
 4:00PM EST  
-Adam Wathan - [@adamwathan](https://twitter.com/adamwathan)  
+Adam Wathan - [@adamwathan](https://twitter.com/adamwathan){:target="_blank"}  
 "Crafting Components with Tailwindcss"
 
 Adam demonstrated a few levels of refactoring code into reusable components (such as Blade, React, or Vue components), with each level becoming increasingly advanced and elegant.  
@@ -331,14 +331,14 @@ Adam finished his talk with a fifth level of refactoring components that extract
 ---  
 
 4:30PM EST  
-Jess Archer - [@jessarchercodes](https://twitter.com/jessarchercodes)  
+Jess Archer - [@jessarchercodes](https://twitter.com/jessarchercodes){:target="_blank"}  
 "The Laravel Developer's Guide to Vue SPAs - Part 2"  
 
-Jess's talk was an extension of [one she did for Laracon AU last year](https://www.youtube.com/watch?v=Zv4bUXEwl20) in regards to creating Single Page Applications using Vue and Laravel.  
+Jess's talk was an extension of [one she did for Laracon AU last year](https://www.youtube.com/watch?v=Zv4bUXEwl20){:target="_blank"} in regards to creating Single Page Applications using Vue and Laravel.  
 
 The first bit of advice is to embrace the idea of the "mono-repo", which is a codebase that contains both the front-end Vue SPA and the back-end Laravel API in the same repository. Front- and back-end code tends to be tightly coupled, so containing both in the same repository increases collaboration across teams and eliminates the need for interdependent Pull Requests that need to be coordinated in multiple places.  
 
-The `CODEOWNERS` file is a [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners) / [GitLab](https://docs.gitlab.com/ee/user/project/code_owners.html) feature that specifies which users/teams that are responsible for the various parts of the codebase. Using this file, rules can be set up to require code reviews for any PRs that touch code that a user/team "owns" before they can be merged. For mono-repos, the `CODEOWNERS` file can be used to protect each team's codebase and ensure they are made aware of any potential changes.  
+The `CODEOWNERS` file is a [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners){:target="_blank"} / [GitLab](https://docs.gitlab.com/ee/user/project/code_owners.html){:target="_blank"} feature that specifies which users/teams that are responsible for the various parts of the codebase. Using this file, rules can be set up to require code reviews for any PRs that touch code that a user/team "owns" before they can be merged. For mono-repos, the `CODEOWNERS` file can be used to protect each team's codebase and ensure they are made aware of any potential changes.  
 
 Jess also touched on user expectations and the importance of accessibility when developing for the front-end. A few tips that were mentioned:
 - select HTML elements based on behavior rather than appearance
@@ -366,7 +366,7 @@ A few general tips:
 ---  
 
 5:00PM EST  
-April Dunford - [@aprildunford](https://twitter.com/aprildunford)  
+April Dunford - [@aprildunford](https://twitter.com/aprildunford){:target="_blank"}  
 "Power Positioning - How to Harness a Marketing Superpower"  
 
 Laravel has enabled many developers to start their own businesses and side-hustles, so it was great that April gave a non-engineering presentation focused on marketing and product positioning.  
@@ -395,10 +395,10 @@ Some questions to ask in order to determine the positioning of a product:
 ---  
 
 5:30PM EST  
-Caleb Porzio - [@calebporzio](https://twitter.com/calebporzio)  
+Caleb Porzio - [@calebporzio](https://twitter.com/calebporzio){:target="_blank"}  
 "All the Cool New Things in Livewire & Alpine"  
 
-Caleb created [Laravel Livewire](https://laravel-livewire.com/) and [Alpine.js](https://github.com/alpinejs/alpine) and now works on both full-time thanks to donors and sponsors. His talk included how to get up and running with Livewire, it's main strengths, and new updates to both Livewire and Alpine.  
+Caleb created [Laravel Livewire](https://laravel-livewire.com/){:target="_blank"} and [Alpine.js](https://github.com/alpinejs/alpine){:target="_blank"} and now works on both full-time thanks to donors and sponsors. His talk included how to get up and running with Livewire, it's main strengths, and new updates to both Livewire and Alpine.  
 
 Livewire has two main mechanics: syncing data with two-way binding and listening to events.  
 
@@ -412,15 +412,15 @@ How to set up Livewire:
 
 An interesting feature of how Livewire works is that it uses back-end templating (Blade views), eliminating the bundle step that would exist with a front-end framework like Vue.js. As a result, components can be thought of as "full-stack", rather than separating features into front- and back-end code.  
 
-Caleb did some entertaining live-coding that displayed new features of both Livewire and Alpine, and shared some amazing [screencasts](https://laravel-livewire.com/screencasts/installation) that were created for visual learners to start working with the framework.  
+Caleb did some entertaining live-coding that displayed new features of both Livewire and Alpine, and shared some amazing [screencasts](https://laravel-livewire.com/screencasts/installation){:target="_blank"} that were created for visual learners to start working with the framework.  
 
 ---  
 
 6:00PM EST  
-Tim MacDonald - [@timacdonald87](https://twitter.com/timacdonald87)  
+Tim MacDonald - [@timacdonald87](https://twitter.com/timacdonald87){:target="_blank"}  
 "Follow the Eloquent Road"  
 
-Tim's "Wizard of Oz"-themed talk demonstrated his love for [Eloquent](https://laravel.com/docs/7.x/eloquent), Laravel's ORM, and how his relationship with it has evolved as he's gained more experience.  
+Tim's "Wizard of Oz"-themed talk demonstrated his love for [Eloquent](https://laravel.com/docs/7.x/eloquent){:target="_blank"}, Laravel's ORM, and how his relationship with it has evolved as he's gained more experience.  
 
 Tim began with showing a few ways how models can be instantiated from forms by moving validation and creation logic to different parts of the application. Starting with the controller passing the request to a static method on the Model class, such as `Adventure::createFromRequest($request)`, to moving all the logic from the model directly into the controller, to letting the form request itself parse the request and return only what is needed to the controller (for example: `Adventure::create($request->adventure())`).  
 
@@ -433,20 +433,20 @@ To summarize each iteration:
 Next, Tim touched on different ways of authorizing users, such as only allowing admin users to perform certain actions. Starting with checks that exist on the model, like `$user->isAdmin()`, which are used within `if` statements in both front- and back-end code, Tim showed how this can quickly grow out of hand as the number of different user roles starts to grow. Taking role-checking logic out of the model and into [gates](https://laravel.com/docs/7.x/authorization#gates) will clean up long `if` statements into more concise `can()` or `cannot()` statements.  
 
 Moving on, Tim elaborated on the various features of Eloquent:
-- [Models](https://laravel.com/docs/7.x/eloquent#defining-models)
-- Query [Builders](https://laravel.com/docs/7.x/queries) and [Scopes](https://laravel.com/docs/7.x/eloquent#query-scopes)
-- [Collections](https://laravel.com/docs/7.x/eloquent-collections)
+- [Models](https://laravel.com/docs/7.x/eloquent#defining-models){:target="_blank"}
+- Query [Builders](https://laravel.com/docs/7.x/queries){:target="_blank"} and [Scopes](https://laravel.com/docs/7.x/eloquent#query-scopes){:target="_blank"}
+- [Collections](https://laravel.com/docs/7.x/eloquent-collections){:target="_blank"}
 
 Creating model-specific Builder and Collection classes (by extending the base classes) can help simplify model classes and leverage the built-in power of Eloquent.  
 
 Tim's presentation was basically about how code can be organized into various parts of the application in order to keep models and controllers clean, leverage existing features, and to create more appropriate domain language and code-readability.  Here's some additional reading from Tim on these subjects:
-- [Giving collections a voice](https://timacdonald.me/giving-collections-a-voice)
-- [Dedicated query builders for Eloquent models](https://timacdonald.me/dedicated-eloquent-model-query-builders)
+- [Giving collections a voice](https://timacdonald.me/giving-collections-a-voice){:target="_blank"}
+- [Dedicated query builders for Eloquent models](https://timacdonald.me/dedicated-eloquent-model-query-builders){:target="_blank"}
 
 ---  
 
 6:30PM EST  
-Jack Ellis - [@jackellis](https://twitter.com/jackellis)  
+Jack Ellis - [@jackellis](https://twitter.com/jackellis){:target="_blank"}  
 "How We Scaled Fathom Analytics to Handle Billions of Requests"  
 
 Jack shared how his website analytics company, Fathom, has been able to adapt and scale as it has grown.
@@ -465,4 +465,4 @@ Some problems faced at scale, and how they were solved:
 7:00PM EST  
 Closing Remarks  
 
-Although virtual, or rather as a result of being virtual, Laracon 2020 was [the largest Laravel conference so far with 5,500+ attendees](https://twitter.com/LaraconOnline/status/1298736195187478528). I received a tremendous amount of value from the conference and would recommend it to anyone in the community that is able to go. I'm already looking forward to the next one, and hoping we can all meet in person at the Georgia Aquarium!  
+Although virtual, or rather as a result of being virtual, Laracon 2020 was [the largest Laravel conference so far with 5,500+ attendees](https://twitter.com/LaraconOnline/status/1298736195187478528){:target="_blank"}. I received a tremendous amount of value from the conference and would recommend it to anyone in the community that is able to go. I'm already looking forward to the next one, and hoping we can all meet in person at the Georgia Aquarium!  
