@@ -72,7 +72,7 @@ Jeffrey finished with a brief talk on the practice of end-to-end testing and how
 ---  
 
 12:15PM EST  
-Taylor Otwell - [@taylorotwell](https://twitter.com/taylorotwell){:target="_blank"}
+Taylor Otwell - [@taylorotwell](https://twitter.com/taylorotwell){:target="_blank"}  
 "Exploring Laravel 8.x"
 
 Laravel 8 will be released on September 8th, 2020 and Taylor shared a lot of the new features that will be available on that day. This is always an exciting part of Laracon, so I'll list some of the new features/improvements that were shared.
