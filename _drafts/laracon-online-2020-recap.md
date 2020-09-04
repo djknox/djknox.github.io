@@ -55,7 +55,7 @@ Jeffrey Way - [@jeffrey_way](https://twitter.com/jeffrey_way)
 
 Jeffrey spoke about how using utility CSS and inline JS on reusable HTML components violates many design principles and would be considered "bad code" to a lot of developers, past and present. However, he makes the case for using frameworks such as [Tailwind](https://tailwindcss.com/) and [Alpine](https://github.com/alpinejs/alpine) to place utility CSS classes and inline JS on [Blade components](https://laravel.com/docs/7.x/blade#components) in order to simplify reusable units.
 
-Here's an example of a counter component that uses Tailwind + Alpine:
+Here's a simple example of a counter component that uses Tailwind + Alpine, showing a utility CSS class and inline JavaScript:
 ```
 <div
     class="mx-auto"
@@ -67,7 +67,7 @@ Here's an example of a counter component that uses Tailwind + Alpine:
 </div>
 ```
 
-Jeffrey finished with a brief talk on the practice of end-to-end testing and how it can be done with [Cypress](https://www.cypress.io/how-it-works/) and Laracast's [Laravel Cypress package](https://github.com/laracasts/cypress) or using Laravel's native [Dusk](https://laravel.com/docs/7.x/dusk) composer package.  
+Jeffrey finished with a brief talk on the practice of end-to-end testing and how it can be done with [Cypress](https://www.cypress.io/how-it-works/) and Laracast's [Laravel Cypress package](https://github.com/laracasts/cypress) or by using Laravel's native [Dusk](https://laravel.com/docs/7.x/dusk) composer package.  
 
 ---  
 
@@ -161,11 +161,11 @@ Model Factory improvements
 - class-based model factories
     - example: `User::factory()->create();`
 - `definition()` method for defining attributes
-- `has()` method - add relationships in model factories much more elegantly 
+- `has()` method - add child relationships  
     - shorthand, magic methods:
         ex: `->hasPosts()`, `->hasUsers()`, etc.
             - Laravel will know that Post, User, etc model are child models
-- `for()` method - other side of relationships
+- `for()` method - add parent relationships  
     - also has shorthand, magic methods:
         ex: `->forPost()`, `->forUser()`, etc.
             - Laravel will know that Post, User, etc model are parent models
@@ -186,22 +186,24 @@ Laravel JetStream
 - install with Blade + Livewire: `php artisan jetstream:install livewire`
 - install with Vue + Inertia: `php artisan jetstream:install inertia`  
 
+Needless to say, there is a lot to look forward to in Laravel 8.  
+
 ---  
 
 2:00PM EST  
 Prosper Otemuyiwa - [@unicodeveloper](https://twitter.com/unicodeveloper)  
 "Supercharing Laravel Apps with Machine Learning"  
 
-Prosper provided this basic definition of "Machine Learning": computer processing and evaluating data beyond programmed algorithms. He spoke about how developers can get started with machine learning by leveraging pre-trained models that are accessible via API calls.
+Prosper provided this basic definition of "Machine Learning": computer processing and evaluating data beyond programmed algorithms. He spoke about how developers can get started with machine learning by leveraging pre-trained models that are accessible via open APIs.
 
-A few of these models include:
+A few of these models include:  
 - Microsoft Azure Cognitive Services
 - Amazon Machine Learning API
 - Google Cloud ML API
 - IBM Watson ML API
 
 Prosper also announced his own "Laravel ML Kit" composer package that will become available a week or so after Laravel 8's release. The package includes:
-- driver-based solution for adding ML features in easy-to-use-package
+- driver-based solution for adding ML features
 - ships with Google Cloud integration
 - Amazon, Microsoft, IBM integration coming soon
 - text recognition, face detection, landmark detection, translations, logo detection, label detection, text to speech, sentiment analysis, etc.
@@ -221,7 +223,7 @@ ml()->translateTextToAnotherLanguage($text, $targetLanguage);
 ml()->isAdultContentPresentInImage($filePath);
 ```
 
-When the package is released, it can be installed with `composer require unicodeveloper/laravel-ml`.
+When the package is released, it can be installed with `composer require unicodeveloper/laravel-ml`.  
 
 ---  
 
@@ -240,7 +242,7 @@ Jose Soto - [@josecanhelp](https://twitter.com/josecanhelp)
 
 Matt and Jose both work at Tighten and shared their preferences for configuring a local development environment, which involves a combination of [Laravel Valet](https://laravel.com/docs/7.x/valet) and [Docker](https://www.docker.com/why-docker). Valet is not particularly suited for managing certain dependencies like MySQL, Redis, Postgres, etc., so Docker can be great for filling in those gaps.  
 
-To help with some of the complexity of installing and managing dependencies with Docker, Tighten developed [Takeout](https://github.com/tightenco/takeout) and made it available to the community. It is intended to be used with the Valet + Docker environment, so it could be a great tool to pull in to your projects if you use the same setup.  
+To help with some of the complexity of installing and managing dependencies with Docker, Tighten developed [Takeout](https://github.com/tightenco/takeout) and made it available to the community. It is intended to be used with the Valet + Docker environment, so it could be a great tool to pull in to your projects if you use that configuration.  
 Be sure to install Docker first, and then install Takeout with `composer global require tightenco/takeout`.  
 
 Some examples of `takeout` commands:
@@ -258,7 +260,7 @@ takeout disable postgresql
 ---  
 
 3:30PM EST  
-Marcel Pociot  - [@marcelpociot](https://twitter.com/marcelpociot)
+Marcel Pociot  - [@marcelpociot](https://twitter.com/marcelpociot)  
 "Refactoring to Simplicity"  
 
 Marcel's presentation was centered around a core tenant of Laravel: simplicity.  
@@ -289,129 +291,114 @@ A couple simple rules for simple code:
 ---  
 
 4:00PM EST  
-Adam Wathan - @adamwathan
-Building a Component Library with Tailwind CSS
-"Crafting Components with tailwindcss"
+Adam Wathan - [@adamwathan](https://twitter.com/adamwathan)  
+"Crafting Components with Tailwindcss"
 
-Design layouts and components so that components can be swapped in and out (if you remove a component, the layout is unchanged)
+Adam demonstrated a few levels of refactoring code into reusable components (such as Blade, React, or Vue components), with each level becoming increasingly advanced and elegant.  
 
-In vue components, Adam uses setup(props) to set up the component based on the prop(s), slot(s), etc. passed to it
-	- setup()
-		* https://composition-api.vuejs.org/api.html#setup
+First level:  
+- simply reorganizing/extracting main elements into separate components
+- no APIs or ways for components to communicate with each other
+- could use "layout" components that separate the individual components from how they are displayed on the page  
 
-Duplicated markup
-	- fine to have separate markup for mobile/desktop styling - makes it easier for tailoring UX to screen sizes
+Second level:
+- extract reusable elements like buttons, using props as an API to configure any details (color, size, etc.)  
 
-Try to make components responsive WITHOUT using media queries
-	Adam demo'd:
-		- 'gap' (in cssgrid, but coming to flexbox)
-		- copying margins of child components to their parents
+Third level:
+- create separate, tailored styling for different screen sizes
+- handle any duplication concerns with a single source of truth
+   * example: a navbar component's links can be saved as data variables
+- duplicate markup is OK: no need for breakpoint classes, presentation code is easier to understand, removes struggle of trying to style for one screen size without affecting the others  
+
+Fourth level:  
+- pass in components in slots to abstracted parent components that use render functions (Vue) to render the child components
+   * example: IconBadge parent component, with BadgeCheckIcon passed in as a slot
+
+Adam also demonstrated how responsive design using breakpoints/media queries can be frustrating when they are responding to the size of the viewport rather than that of their containing elements. He recommends trying to design components to be responsive _without_ using media queries first, if at all possible, so they can better adapt to the context in which they are in. A few approaches to doing this:
+- with Flexbox wrapping, use the same margins for all child components and give the parent component the inverse of those margins in order to maintain alignment as flexbox wraps the elements  
+   * example:
+        ```
+        <div class="flex flex-wrap -ml-3 -mt-2">
+            <div class="ml-3 mt-3">
+            </div>
+        </div>
+        ``` 
+- CSS Grid's 'gap' property (coming soon to Flexbox) does the same thing as the previous example, with simpler code
+   * example: `<div class="flex flex-wrap gap-3">`  
+
+Adam finished his talk with a fifth level of refactoring components that extracts layout details and sends them as props from a parent layout component. The child components then need to be able to parse the props and react accordingly. This is more of a work in progress/thought experiment that was demonstrated for fun and to show how complex this type of design can become.  
 
 ---  
 
 4:30PM EST  
-Jessica Archer - @jessarchercodes
-The Laravel Developer's Guide to Vue SPAs - Part 2
+Jess Archer - [@jessarchercodes](https://twitter.com/jessarchercodes)  
+"The Laravel Developer's Guide to Vue SPAs - Part 2"  
 
-Embrace the mono-repo by default
-	- Vue app and Laravel API in same repository
+Jess's talk was an extension of [one she did for Laracon AU last year](https://www.youtube.com/watch?v=Zv4bUXEwl20) in regards to creating Single Page Applications using Vue and Laravel.  
 
-`CODEOWNERS` file
-	- specify users/groups that are responsible for different parts of the codebase
+The first bit of advice is to embrace the idea of the "mono-repo", which is a codebase that contains both the front-end Vue SPA and the back-end Laravel API in the same repository. Front- and back-end code tends to be tightly coupled, so containing both in the same repository increases collaboration across teams and eliminates the need for interdependent Pull Requests that need to be coordinated in multiple places.  
 
-Vue.js Style Guide:
-	- eslint.vuejs.org
+The `CODEOWNERS` file is a [GitHub](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/about-code-owners) / [GitLab](https://docs.gitlab.com/ee/user/project/code_owners.html) feature that specifies which users/teams that are responsible for the various parts of the codebase. Using this file, rules can be set up to require code reviews for any PRs that touch code that a user/team "owns" before they can be merged. For mono-repos, the `CODEOWNERS` file can be used to protect each team's codebase and ensure they are made aware of any potential changes.  
 
-Slots before props!
+Jess also touched on user expectations and the importance of accessibility when developing for the front-end. A few tips that were mentioned:
+- select HTML elements based on behavior rather than appearance
+   * examples:
+      - use `<a>` for hyperlinks even when they are not styled to look like links
+      - use `<button>` when it triggers behavior from clicking on it
+      - wrap forms with `<form>`  
+- give inputs a `name` attribute
+- make `type="button"` the default for buttons
 
-Select HTML elements based on behavior, not appearance (accessibility and user expectations)
-	- examples:
-		- use <a> even when it doesn't LOOK like a link
-		- use <button> when it is something that triggers behavior from clicking on it
-		- use <form @submit.prevent> with forms
+For back-end development:
+- write controller tests as a contract between your front-end and back-end (example: don't use `withoutMiddleware()` in tests, as your front-end will always use middleware)
+- use appropriate HTTP headers
 
-Give inputs a name attribute
-
-Make type="button" the default for buttons
-
-Create <BaseIcon> component for any icons
-	- pass the icon name as a prop
-	- use computed property to create the icon based on the prop passed to the component
-
-
-Back-end tips
-	- Think of your controller tests as a contract between your front-end and back-end (example: don't use withoutMiddleware() in tests, as your front-end will always use middleware)
-	- use appropriate HTTP headers
-
-State Management
-	- prefer local state
-	- use Vuex for global state only
-
-Form Validation
-	- server-side form validation is fine, just pass errors/success messages to front-end to display (re-creating front-end form validation is not really necessary)
-
-Write code that's easy to delete and refactor
-
-APIs are UIs for developers - consider the "Developer Experience"
-
-Remember the BACK button
-
-Utility CSS is way more enjoyable
-
-Don't lose sight of why you're building an SPA
-	- more like an app than a webpage
-	- enjoyable!
-
-Learn the features of tools you work with
+A few general tips:
+- for front-end state management, default to local state and use Vuex for global state only
+- for form validation, server-side validation is fine by itself and consider using front-end validation for any erroneous inputs where the user may need guidance to correct  
+- write code that's easy to delete/refactor; keep all tightly-coupled code together and resist sharing code across features unless it is global or generic
+- APIs are UIs for developers, so consider the "Developer Experience"  
+- remember the `Back` button when building SPAs
+- utility CSS is more fun than scoped styles
+- keep in mind why you chose to build an SPA; it should be more like an application than a webpage
+- learn the features of any tools you work with  
 
 ---  
 
 5:00PM EST  
-April Dunford - @aprildunford
-Power Positioning - How to Harness a Marketing Superpower
-Powerful Product Positioning
+April Dunford - [@aprildunford](https://twitter.com/aprildunford)  
+"Power Positioning - How to Harness a Marketing Superpower"  
 
-Positioning is not:
-	- a tag line
-	- a POV
-	- vision
-	- brand
-	- messaging
-	- "marketing"
-	- go-to-market strategy
+Laravel has enabled many developers to start their own businesses and side-hustles, so it was great that April gave a non-engineering presentation focused on marketing and product positioning.  
 
-Positioning defines:
-	- how the product is the best at providing something that a well-defined set of customers care a lot about
-	- context-setting for products
+Positioning is not a tag line, a point-of-view, vision, brand, messaging, "marketing", or a go-to-market strategy. Rather, positioning defines how a product is the best at providing something that a well-defined set of customers care a lot about. It's basically context-setting for products or services.  
 
-Market categories help customers decide what to pay attention to
-Customers use what they know about the market to understand solutions
+Some actual components of positioning include:
+- market category
+- alternatives
+- unique attributes
+- value
+- customer segments
 
-Traditional Positioning Statement:
-	- For (target market), (our offering) is a (market category) which provides (benefit) unlike (competitor).
+Customers use what they know about the market to understand solutions and market categories help customers decide which solutions to pay attention to. Positioning helps create a context for a product in which the value becomes immediately obvious to its intended customers.
 
-Components of Positioning:
-	- market category
-	- alternatives
-	- unique attributes
-	- value
-	- customer segments
+A traditional, marketing school positioning statement is:
+- "For (target market), (our offering) is a (market category) which provides (benefit) unlike (competitor)."
 
-Customer-centric Positioning
-	- if you didn't exist, what would customers use?
-	- what features do you have that others don't?
-	- what value do the attributes enable?
-	- who cares a lot about that value?
-	- what context makes the value obvious to your target segments?
-
+Some questions to ask in order to determine the positioning of a product:
+- if you didn't exist, what would customers use?
+- what features do you have that others don't?
+- what value do the attributes enable?
+- who cares a lot about that value?
+- what context makes the value clear to your target segments?
 
 ---  
 
 5:30PM EST  
-Caleb Porzio - @calebporzio
-All the Cool New Things in Livewire & Alpine
+Caleb Porzio - @calebporzio  
+"All the Cool New Things in Livewire & Alpine"  
 
-Livewire v2.0
+Caleb created [Laravel Livewire](https://laravel-livewire.com/) and now works on it full-time thanks to donors and sponsors.
 
 How to set up Livewire:
 	composer require livewire/livewire
