@@ -425,7 +425,7 @@ Tim's "Wizard of Oz"-themed talk demonstrated his love for [Eloquent](https://la
 Tim began with showing a few ways how models can be instantiated from forms by moving validation and creation logic to different parts of the application. Starting with the controller passing the request to a static method on the Model class, such as `Adventure::createFromRequest($request)`, to moving all the logic from the model directly into the controller, to letting the form request itself parse the request and return only what is needed to the controller (for example: `Adventure::create($request->adventure())`).  
 
 To summarize each iteration:  
-1. model instantiation via a static method on Model, called from the controller
+1. model instantiation via a static method on model, called from the controller
 2. all instantiation logic moved directly into the controller
 3. cleaning up the controller by letting the form request class parse the necessary fields and pass to Eloquent's default `create()` method within the controller
    * This final iteration pushes validation logic to the form request class, where everything is prepared and nothing unnecessary makes it through to any other parts of the application.  
