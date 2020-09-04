@@ -2,8 +2,8 @@
 layout: post
 title: Laracon Online 2020 Recap
 permalink: "/laracon-2020/"
+date: 2020-09-04 16:33 -0400
 ---
-
 Laracon is the Laravel community's time to get together, listen to talks from a variety of speakers, and get excited about the new features promised in future releases of the framework. Originally planned to be held [earlier this year at Atlanta's Georgia Aquarium](https://twitter.com/taylorotwell/status/1177566503060869121), the conference was cancelled due to COVID-19 and rescheduled for August 26th in a completely virtual setting. Fortunately, a virtual version of Laracon named "Laracon Online" has been held every year since 2017, so the event team was well-equipped with the experience needed to transition from aquarium to Zoom.  
 
 Below is a brief recap of Laracon Online 2020 that I hope will be useful for anyone who was unable to attend or could just use a refresher on all the cool stuff that happened.  
