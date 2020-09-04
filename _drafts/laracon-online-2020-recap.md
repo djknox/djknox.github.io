@@ -395,30 +395,24 @@ Some questions to ask in order to determine the positioning of a product:
 ---  
 
 5:30PM EST  
-Caleb Porzio - @calebporzio  
+Caleb Porzio - [@calebporzio](https://twitter.com/calebporzio)  
 "All the Cool New Things in Livewire & Alpine"  
 
-Caleb created [Laravel Livewire](https://laravel-livewire.com/) and now works on it full-time thanks to donors and sponsors.
+Caleb created [Laravel Livewire](https://laravel-livewire.com/) and [Alpine.js](https://github.com/alpinejs/alpine) and now works on both full-time thanks to donors and sponsors. His talk included how to get up and running with Livewire, it's main strengths, and new updates to both Livewire and Alpine.  
+
+Livewire has two main mechanics: syncing data with two-way binding and listening to events.  
 
 How to set up Livewire:
-	composer require livewire/livewire
+- install with `composer require livewire/livewire`
+- in layouts, drop in blade directives:
+    ```
+    @livewireStyles
+    @livewireScripts
+    ```
 
-	Drop in blade directives:
-	@livewireStyles
-	@livewireScripts
+An interesting feature of how Livewire works is that it uses back-end templating (Blade views), eliminating the bundle step that would exist with a front-end framework like Vue.js. As a result, components can be thought of as "full-stack", rather than separating features into front- and back-end code.  
 
-Two main strengths:
-	Sync data with two-way binding
-	Listen to events
-
-Uses blade views, so no bundle step like with Vue.js
-
-Can create "full-stack" components, rather than separate back-end and front-end components
-
-
-
-Alpine.js
-@entangle to synchronize properties between Livewire and Alpine
+Caleb did some entertaining live-coding that displayed new features of both Livewire and Alpine, and shared some amazing [screencasts](https://laravel-livewire.com/screencasts/installation) that were created for visual learners to start working with the framework.  
 
 ---  
 
