@@ -417,51 +417,52 @@ Caleb did some entertaining live-coding that displayed new features of both Live
 ---  
 
 6:00PM EST  
-Tim Macdonald - @timacdonald87
-Follow the Eloquent Road
+Tim MacDonald - [@timacdonald87](https://twitter.com/timacdonald87)  
+"Follow the Eloquent Road"  
 
-Eloquent:
-	* Builders
-	* Models
-	* Collections
+Tim's "Wizard of Oz"-themed talk demonstrated his love for [Eloquent](https://laravel.com/docs/7.x/eloquent), Laravel's ORM, and how his relationship with it has evolved as he's gained more experience.  
 
-Eloquent Collections
-timacdonald.me/giving-collections-a-voice
+Tim began with showing a few ways how models can be instantiated from forms by moving validation and creation logic to different parts of the application. Starting with the controller passing the request to a static method on the Model class, such as `Adventure::createFromRequest($request)`, to moving all the logic from the model directly into the controller, to letting the form request itself parse the request and return only what is needed to the controller (for example: `Adventure::create($request->adventure())`).  
 
-Eloquent Builders
-- move Eloquent Scopes from the model class to a builder class
-Witch::whereWicked()
-	 ->whereFromTheWest();
-timacdonald.me/dedicated-eloquent-model-query-builders
+To summarize each iteration:  
+1. model instantiation via a static method on Model, called from the controller
+2. all instantiation logic moved directly into the controller
+3. cleaning up the controller by letting the form request class parse the necessary fields and pass to Eloquent's default `create()` method within the controller
+   * This final iteration pushes validation logic to the form request class, where everything is prepared and nothing unnecessary makes it through to any other parts of the application.  
 
+Next, Tim touched on different ways of authorizing users, such as only allowing admin users to perform certain actions. Starting with checks that exist on the model, like `$user->isAdmin()`, which are used within `if` statements in both front- and back-end code, Tim showed how this can quickly grow out of hand as the number of different user roles starts to grow. Taking role-checking logic out of the model and into [gates](https://laravel.com/docs/7.x/authorization#gates) will clean up long `if` statements into more concise `can()` or `cannot()` statements.  
+
+Moving on, Tim elaborated on the various features of Eloquent:
+- [Models](https://laravel.com/docs/7.x/eloquent#defining-models)
+- Query [Builders](https://laravel.com/docs/7.x/queries) and [Scopes](https://laravel.com/docs/7.x/eloquent#query-scopes)
+- [Collections](https://laravel.com/docs/7.x/eloquent-collections)
+
+Creating model-specific Builder and Collection classes (by extending the base classes) can help simplify model classes and leverage the built-in power of Eloquent.  
+
+Tim's presentation was basically about how code can be organized into various parts of the application in order to keep models and controllers clean, leverage existing features, and to create more appropriate domain language and code-readability.  Here's some additional reading from Tim on these subjects:
+- [Giving collections a voice](https://timacdonald.me/giving-collections-a-voice)
+- [Dedicated query builders for Eloquent models](https://timacdonald.me/dedicated-eloquent-model-query-builders)
 
 ---  
 
 6:30PM EST  
-Jack Ellis - @jackellis
-How We Scaled Fathom Analytics to Handle Billions of Requests
-usefathom.com 
+Jack Ellis - [@jackellis](https://twitter.com/jackellis)  
+"How We Scaled Fathom Analytics to Handle Billions of Requests"  
 
-Started on Heroku - didn't prematurely optimize
+Jack shared how his website analytics company, Fathom, has been able to adapt and scale as it has grown.
 
-Use queues + jobs to lighten strain on database
+Some takeways:
+- don't prematurely optimize and plan for growth before it is necessary
+- when scaling becomes an issue, use queues + jobs to lighten the strain on the database
+- don't overcomplicate things trying to be clever
 
-Don't over-complicate things trying to be clever
-
-Infrastructure
-	- Laravel Vapor
-	- Redis
-
-Problems at Scale
-	- moving from Redis to to ElasticSearch to handle scale of queries
-	- moving from MySQL/Postgres/etc. to DynamoDB in order to handle issue of over-provisioning database resources while still needing infinite scale -> DynamoDBforLaravel.com
-
+Some problems faced at scale, and how they were solved:
+- moved from Redis to to ElasticSearch to handle scale of queries
+- moved from MySQL/Postgres/etc. to DynamoDB to handle the issue of over-provisioning database resources while still needing infinite scale
 
 ---  
 
 7:00PM EST  
-Closing Remarks
+Closing Remarks  
 
-feedback: bit.ly/laracon2020
-
-5500+ attendees!
+Although virtual, or rather as a result of being virtual, Laracon 2020 was [the largest Laravel conference so far with 5,500+ attendees](https://twitter.com/LaraconOnline/status/1298736195187478528). I received a tremendous amount of value from the conference and would recommend it to anyone in the community that is able to go. I'm already looking forward to the next one, and hoping we can all meet in person at the Georgia Aquarium!  
