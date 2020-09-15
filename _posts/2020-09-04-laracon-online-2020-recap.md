@@ -16,7 +16,7 @@ Freek Van Der Herten - [@freekmurze](https://twitter.com/freekmurze){:target="_b
 
 Multitenancy is, basically, when a single app serves several (groups of) users and those users/teams are unable to see the data belonging to other users/teams.  
 
-Freek shared a new `composer` package for implementing multitenancy within a Laravel application called [Laravel Multitenancy](spatie.be/docs/laravel-multitenancy){:target="_blank"}.  
+Freek shared a new `composer` package for implementing multitenancy within a Laravel application called [Laravel Multitenancy](https://spatie.be/docs/laravel-multitenancy){:target="_blank"}.  
 
 ---
 
